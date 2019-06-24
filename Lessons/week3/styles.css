@@ -1,0 +1,47 @@
+/* 
+            USING EXTERNAL STYLE SHEET 
+  NB: comments have been included to aid your understanding
+*/
+
+
+/* override undesirable default properties */
+body{
+    margin: 0; /*remove browser window margins*/
+    box-sizing: border-box; /* prevent other properties such as padding from altering container dimensions */
+}
+
+#header{
+    width: 100%; /* declare container width */
+    height: 80px; /* declare container height */
+    background-color: aquamarine; /* specify container background color */
+}
+
+#sidebar{
+    width: 15%; /* declare container width */
+    height: 300px; /* declare container height */
+    background-color: rgb(78, 97, 180); /* specify container background color */
+    float: left; /* position element to the extreme left of browser window */
+}
+
+#main{
+    float: left;  /* allow main container the side bar container */
+    width: 85%;   /* declare container width */
+    height: 300px;  /* declare container height */
+    /* background-color: rgb(97, 119, 112); */
+    background-image: url(images/bg1.jpg); /* insert background image */
+    background-repeat: no-repeat; /* prevents image repeat */
+    background-size: cover; /* stretch image to cover entire background of the container */
+}
+
+#footer{
+    clear: both; /* remove the preceding float effects on the footer container */
+    width: 100%; /* declare footer width */
+    height: 80px; /* declare footer height */
+    background-color: rgb(190, 42, 66); /* specify container background color */
+}
+.heading{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}

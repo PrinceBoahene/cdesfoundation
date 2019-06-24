@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Layout</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: 'comic sans ms';
+        }
+        div{
+            box-sizing: border-box;
+        }
+        #header{
+            background: blue;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            font-weight: bold;
+            line-height: 90px;
+            font-family: "comic sans ms";
+        }
+        #sidebar{
+            height: 250px;
+            width:10%;
+            float: left;
+            background: rgb(233, 230, 230);
+            padding: 25px;
+        }
+        span{
+            display: block;
+            margin-bottom: 10px;
+        }
+        #section{
+            /* position: absolute; */
+            /* left: 10%; */
+            /* top: 100px; */
+            float: left;
+            height: 250px;
+            width: 90%;
+            /* border: 1px solid red; */
+            padding: 20px;
+        }
+        #footer{
+            width: 100%;
+            height: 50px;
+            clear: both;
+            background: grey;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>City Gallary</h1>
+    </div>
+    <div id="sidebar">
+        <span>Accra</span>
+        <span>Kumasi</span>
+        <span>Sunyani</span>
+        <span>Takoradi</span>
+    </div>
+    <div id="section">
+        <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Rerum, a quae optio eaque dicta fugit iure eum ullam aspernatur doloremque <br>
+                sed molestias dolorum expedita vitae in enim obcaecati quo odit.
+        </p>
+        <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Rerum, a quae optio eaque dicta fugit iure eum ullam aspernatur doloremque <br>
+                sed molestias dolorum expedita vitae in enim obcaecati quo odit.
+        </p>
+    </div>
+    <div id="footer">
+        &copy;2019 CODE-S FOUNDATION
+    </div>
+
+    <!-- using tables for layout -->
+    <table border="1">
+        <tr>
+            <td colspan="10">Header</td>
+
+        </tr>
+        <tr>
+            <td colspan="10">Navigation</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="3">Side Bar</td>
+            <td colspan="8" >First Main Content</td>
+        </tr>
+        <tr></tr>
+        <!-- <tr></tr>
+        <tr></tr> -->
+        <tr>
+                <td colspan="8">Second Main Content</td>
+        </tr>
+        <!-- <tr></tr>
+        <tr></tr> -->
+        <!-- <tr></tr> -->
+        <tr>
+            <td colspan="10">Footer</td>
+        </tr>
+    </table>
+    
+    
+    <form action="">
+        <!-- grouping select options -->
+        <select name="" id="" >
+            <option value="">-Select the role closest to your current position-</option>
+            <optgroup label="Faculty">
+                <option value="">Tenured Faculty (Professor, Associate Professor)</option>
+                <option value="">Tenure Track (Assistant Professor)</option>
+                <option value="">Department Chair</option>
+                <option value="">Non-tenured (Lecturer, Instructor)</option>           
+             </optgroup>
+            <optgroup label="Administrator">
+                <option value="">President</option>
+                <option value="">Provost</option>
+                <option value="">Dean</option>
+                <option value="">Vice President</option>
+                <option value="">Manager</option>
+            </optgroup>
+            <optgroup label="Other Roles">
+                <option value="">Librarian</option>
+                <option value="">Trustee</option>
+                <option value="">Retired</option>
+                <option value="">Other role not listed</option>
+            </optgroup>
+        </select><br><br>
+        <!-- allowing multiple selections -->
+        <select name="" id="" multiple>
+            <option value="">option 1</option>
+            <option value="">option 2</option>
+            <option value="">option 3</option>
+            <option value="">option 4</option>
+        </select>
+    </form>
+</body>
+</html>

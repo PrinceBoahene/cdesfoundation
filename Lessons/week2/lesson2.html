@@ -1,0 +1,214 @@
+<!--
+    15/06/2019: lesson 2
+    This tutorial reviewed some of the things introduced last week for the sake of newcomers
+    and went on to discuss some new concepts/html elements 
+    In summary, these are the areas covered so far:
+    1. HTML Tags, attributes and elements
+    2. HTML basic structure
+    3. Case insensititivity of html elements: By this <H1></H1> works the same as <h1></h1>
+    4. HTML Conventions: commenting, indentation, use of lower case for tag/element names
+    5. Browser white space insensitivity and how to overcome it
+    6. Inserting images
+    7. Creating lists
+    8. Creating tables
+    9. Creating forms
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- place some important elements here for the browser -->
+        <title>lesson 2</title>
+    </head>
+    <body>
+            <!-- <video width="320" height="240" controls>
+                <source src="VID-20160502-WA0002.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <video src="VID-20160502-WA0002.mp4" type="video/mp4" controls width="500"></video>
+            <embed src="VID-20160502-WA0002.mp4" type="video/mp4" hidden="true">
+        <!-- using some common html tags-->
+        <!-- Header Tags -->
+        <h1 TITLE="HEADER 1">Title 1</h1>
+        <h2>Title 2</h2>
+        <h6>Title 6</h6>
+
+        <!-- creating paragraphs -->
+        <p>
+            This is the first line of this paragraph<br> <!--br tag helps insert new lines-->
+            This is the second line           
+        </p>
+        <p>
+            This is the first line of this paragraph<br><br>
+            This is the second line           
+        </p>
+
+        <!-- using divisions and other block elements -->
+        <div>
+            here is the content of my first divsion tag
+        </div>
+        <!--these tags here and others called semantic tags work pretty much the same as the div tag-->
+        <nav>For navigation items</nav>
+        <section>creates different sections on the page </section>
+        <footer>the footer of the page goes here</footer>
+
+        <!-- Inserting images 
+             Specify path including image name and the extension depending on the image format
+             Common extensions/formats include jpg, png, ico
+        -->
+
+        <!--when the image file resides in the same directory/folder as the html file-->
+        <img src="bg1.jpg">
+
+        <!-- when the image resides in a subfolder one level up -->
+        <!--the alt attribute is used to provide an alternative text for display when the image fails to load-->
+        <img src="profile_images/willi.jpg" alt="william">
+
+        <!--navigating through more subfolders to access image-->
+        <img src="profile_images/admins/administrator.ico">
+
+        <!-- controlling image dimension -->
+        <img src="bg1.jpg" width="200" height="600">
+
+        <!-- providing image tooltip. to see the tooltip, hover over the image-->
+        <img src="profile_images/admins/administrator.ico" title="Administrator">
+
+
+        <!-- creating lists -->
+
+        <!-- Ordered/numbered list -->
+        <h3>Group Members</h3>
+        <ol>
+            <li>Kofi</li>
+            <li>Ama</li> 
+            <li>George</li>
+        </ol>
+        
+        <!-- bulleted list -->
+        <h3>List of fruits</h3>
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+        </ul>
+
+        <!-- creating tables -->
+        <h2>Default Table Display</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Marrital Status</th>
+            </tr>
+            <tr>
+                <td>William Agyapong</td>
+                <td>25</td>
+                <td>male</td>
+                <td>Married</td>
+            </tr>
+            <tr>
+                <td>Kofi</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>Single</td>
+            </tr>
+            <tr>
+        </table>
+
+        <!--Declaring table borders and merging cells-->
+        <h2>Table with borders</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Marrital Status</th>
+            </tr>
+            <tr>
+                <td>William Agyapong</td>
+                <td>25</td>
+                <td>male</td>
+                <td>Married</td>
+            </tr>
+            <tr>
+                <td>Kofi</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>Single</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td><!-- merge 3 cells across table columns-->
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>sadf</td>
+                <td>dsf</td>
+                <td rowspan="2">1</td> <!--merge 2 cells across table rows-->
+                <td>fsf</td>
+            </tr>
+            <tr>
+                <td>assad</td>
+                <td>sdfsd</td>
+                <!-- <td>2</td> --> <!--rowspan above includes this cell in the merge, hence, no need for this cell-->
+                <td></td>
+            </tr>
+            <tr>
+                <td>sdf</td>
+                <td>fd</td>
+                <td>ff</td>
+                <td>df</td>
+            </tr>
+        </table> 
+
+        <!--adding padding to table cells and removing cell spacing-->
+        <h2>Table with more padding and no cell spacing </h2>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Marrital Status</th>
+            </tr>
+            <tr>
+                <td>William Agyapong</td>
+                <td>25</td>
+                <td>male</td>
+                <td>Married</td>
+            </tr>
+            <tr>
+                <td>Kofi</td>
+                <td>19</td>
+                <td>Male</td>
+                <td>Single</td>
+            </tr>
+        </table>
+
+        <!-- creating forms to collect user inputs -->
+        <h2>Form Fields</h2>
+        <form action="">
+            <input type="text" placeholder="this is a text field"><br><br> <!-- creates text field-->
+            <input type="password" placeholder="this a password field"><br> <br><!-- creates a password field-->
+            <input type="date"><br><br> <!--creates a date pallet-->
+            Check all that apply<br><br>
+            <span>Soccer</span><input type="checkbox"> 
+            <span>Basketball</span><input type="checkbox">
+            <span>Cricket</span><input type="checkbox"> <br><br>
+            Gender: <input type="radio" name="gender">Male <input type="radio" name="gender"> Female <br><br> <!--the same name attribute value is required to link the 2 radio buttons-->
+            <input type="submit" value="Login"> OR <!-- creates a submit button-->
+            <button>Register</button> <!--works like input control with the submit type-->
+        
+            <!--nesting tables in forms-->
+            <br><br>
+            <table>
+                <tr>
+                    <td><input type="submit" value="9"></td>
+                    <td><input type="submit" value="8"></td>
+                    <td><button>8</button></td> <!--alternative submit button-->
+                    <td><button>7</button></td> <!--alternative submit button-->
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>

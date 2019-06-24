@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Development | Week 3</title>
+
+    <!-- change default page favicon -->
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+
+    <!-- import the external style sheet for rendering -->
+    <link rel="stylesheet" href="styles.css"> 
+
+    <!-- Using internal style sheet -->
+    <style>
+        /* using tag names to select elements */
+        h1{
+            text-align: center;
+            color: beige; /* text color*/
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+        h2{
+            font-size: 1.4em;
+            font-family: 'Lucida Sans';
+            text-shadow: 5px 8px 3px rgb(226, 226, 216); /* apply shadow on text*/
+            margin-left: 15px; /* specify only the left margin*/
+        }
+
+        /* using class attribute to select elements */
+        .tut-subsection{
+            width: 500px;
+            border: 1px dashed blue;
+            border-radius: 6px; /* create rounded corners*/
+            margin-left: 20px;
+            padding: 10px;
+        }
+        .tut-subheading{
+            font-family: cursive;
+            font-size: 1.2em;
+            color: darkkhaki;
+            display: block; /* change the default inline property of the span tag to add a line break*/
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        /* using id attribute to select elements */
+        #lorem {
+           height: 300px;
+            color: cyan;
+            font-size: 20px;
+            text-align: justify;
+            border:1px dotted blue;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>week 3 web development tutorials</h1>
+    <h2>Exploring more form controls</h2>
+    <div class="tut-subsection">
+        <form action="">
+            <span class="tut-subheading">Dropdown/combo box</span>
+            <select name="fruits" id="" required>
+                <option value="">--select fruit--</option>
+                <option value="apple">Apple</option>
+                <option value="avocado">Avocado</option>
+                <option value="black-berry">Black berry</option>
+                <option value="mango">Mango</option>
+                <option value="orange">Orange</option>
+            </select> <br><br>
+
+            <span class="tut-subheading">Radio Bottons</span>
+            <input type="radio" name="gender" required> <label>Male</label>
+            <input type="radio" name="gender" required> <label>Female</label> 
+
+            <span class="tut-subheading">Textarea: Large text field for comments/notes</span>
+            <textarea name="comment" cols="60" rows="10" placeholder="write comments here..." required></textarea>
+
+            <span class="tut-subheading">Email Text field for quick validation</span>
+            <input type="email" name="email" placeholder="Enter email address here" required><br><br>
+
+            <span class="tut-subheading">Number Text Field for quick validation</span>
+            <input type="number" name="amount" placeholder="Enter total amount due"> <!--can only accept numbers-->
+
+            <span class="tut-subheading">Already selected check box</span>
+            <label>Nationality:</label> &nbsp;&nbsp;&nbsp;
+            Ghanaian <input type="checkbox" name="ghanaian" checked> 
+            Other <input type="checkbox" name="other-national"> <br><br>
+
+            <input type="submit">
+        </form>
+    </div>
+
+    <h2>HTML ENTITIES</h2>
+    <div class="tut-subsection">
+            <span class="tut-subheading">Provide a way to include special characters</span>
+            copy right notice: &copy; <br>
+            Greater than: &gt; <br>
+            Less than: &lt;
+    </div>
+
+    <h2>Cascading Style Sheets</h2>
+     <!-- Using inline style sheet -->
+    <p style=" text-align: center; font-family: 'comic sans ms'; font-weight: bold; font-size: 1.5em">Introducing CSS</p>
+
+    <p id="lorem">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil alias quibusdam natus quis perspiciatis delectus, facere blanditiis. Veniam dignissimos, at quidem quod vero in aut minus, iste corrupti laborum ullam?
+        <br><br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo mollitia cum quaerat impedit id voluptas ad in ducimus. Ipsa vel provident incidunt repudiandae minus corrupti veniam nemo velit quam dolore.
+    </p> 
+
+
+    <!-- page layout -->
+    <h2>Page Layout</h2>
+    <!-- 
+        the css codes for this section are contained on the styles.css file for the purpose of demonstrating the
+        use of external style sheets
+    -->
+    <div id="header">
+        <h3 class="heading">Header Section</h3>
+    </div>
+    <div id="sidebar">
+        <h3 class="heading">Side Bar Section</h3>
+    </div>
+    <div id="main">
+        <h3 class="heading">Main Section</h3>
+    </div>
+    <div id="footer">
+        <h3 class="heading">Footer Section</h3>
+    </div>
+</body>
+</html>
+<html>
+
+</html>
